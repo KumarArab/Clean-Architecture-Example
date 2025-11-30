@@ -1,6 +1,6 @@
 import 'package:cleanarchexample/auth/presentation/bloc/auth_bloc.dart';
 import 'package:cleanarchexample/auth/presentation/bloc/auth_event.dart';
-import 'package:cleanarchexample/auth/presentation/screens/login_screen.dart';
+// import 'package:cleanarchexample/auth/presentation/screens/login_screen.dart';
 import 'package:cleanarchexample/home/presentation/screens/home_screen.dart';
 import 'package:cleanarchexample/core/commons/cubits/app_user/app_user_cubit.dart';
 import 'package:cleanarchexample/core/commons/cubits/app_user/app_user_state.dart';
@@ -8,6 +8,9 @@ import 'package:cleanarchexample/core/di/dependencies.dart';
 import 'package:cleanarchexample/core/navigation/navigation_observer.dart';
 import 'package:cleanarchexample/core/theme/app_theme.dart';
 import 'package:cleanarchexample/firebase_options.dart';
+import 'package:cleanarchexample/widget_testing_practice/auth/auth_repo.dart';
+import 'package:cleanarchexample/widget_testing_practice/auth/login_bloc.dart';
+import 'package:cleanarchexample/widget_testing_practice/auth/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,6 +21,7 @@ void main() async {
   await initDependencies();
   runApp(MultiBlocProvider(
     providers: [
+      BlocProvider(create: (_) => LoginBloc(auth: AuthRepo())),
       BlocProvider(create: (_) => serviceLocator<AppUserCubit>()),
       BlocProvider(create: (_) => serviceLocator<AuthBloc>())
     ],
@@ -46,14 +50,15 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.dark,
       navigatorObservers: [KittyNavigationObserver()],
-      home: BlocSelector<AppUserCubit, AppUserState, bool>(
-        selector: (state) {
-          return state is AppUserSuccess;
-        },
-        builder: (ctx, isLoggedIn) {
-          return isLoggedIn ? HomeScreen() : LoginScreen();
-        },
-      ),
+      // home: BlocSelector<AppUserCubit, AppUserState, bool>(
+      //   selector: (state) {
+      //     return state is AppUserSuccess;
+      //   },
+      //   builder: (ctx, isLoggedIn) {
+      //     return isLoggedIn ? HomeScreen() : LoginScreen();
+      //   },
+      // ),
+      home: LoginScreen(),
     );
   }
 }
