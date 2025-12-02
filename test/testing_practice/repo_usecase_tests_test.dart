@@ -1,4 +1,4 @@
-import 'package:cleanarchexample/unit_testing_practice/repo_usecase_tests.dart';
+import 'package:cleanarchexample/testing/unit_testing_practice/repo_usecase_tests.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';

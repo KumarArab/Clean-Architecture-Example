@@ -1,4 +1,4 @@
-import 'package:cleanarchexample/unit_testing_practice/simple_tests.dart';
+import 'package:cleanarchexample/testing/unit_testing_practice/simple_tests.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

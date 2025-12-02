@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:cleanarchexample/widget_testing_practice/greeting/future_repo.dart';
-import 'package:cleanarchexample/widget_testing_practice/greeting/greeting_widget.dart';
+import 'package:cleanarchexample/testing/widget_testing_practice/greeting/future_repo.dart';
+import 'package:cleanarchexample/testing/widget_testing_practice/greeting/greeting_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';

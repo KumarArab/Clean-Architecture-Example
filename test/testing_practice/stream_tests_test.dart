@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:cleanarchexample/unit_testing_practice/stream_tests.dart';
+import 'package:cleanarchexample/testing/unit_testing_practice/stream_tests.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() async {

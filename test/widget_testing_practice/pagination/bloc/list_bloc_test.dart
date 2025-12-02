@@ -1,8 +1,8 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:cleanarchexample/widget_testing_practice/pagination/bloc/list_bloc.dart';
-import 'package:cleanarchexample/widget_testing_practice/pagination/item.dart';
-import 'package:cleanarchexample/widget_testing_practice/pagination/items_repo.dart';
-import 'package:cleanarchexample/widget_testing_practice/pagination/page.dart';
+import 'package:cleanarchexample/testing/widget_testing_practice/pagination/bloc/list_bloc.dart';
+import 'package:cleanarchexample/testing/widget_testing_practice/pagination/item.dart';
+import 'package:cleanarchexample/testing/widget_testing_practice/pagination/items_repo.dart';
+import 'package:cleanarchexample/testing/widget_testing_practice/pagination/page.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 

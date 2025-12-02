@@ -1,4 +1,4 @@
-import 'package:cleanarchexample/unit_testing_practice/changeNotifier/change_notifier.dart';
+import 'package:cleanarchexample/testing/unit_testing_practice/changeNotifier/change_notifier.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
